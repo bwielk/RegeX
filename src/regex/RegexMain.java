@@ -36,5 +36,17 @@ public class RegexMain {
         System.out.println(stringWithSpaces.replaceAll("\\S", "."));
         System.out.println(stringWithSpaces.replaceAll("\\W", "."));
         System.out.println(stringWithSpaces.replaceAll("\\w", "."));
+        System.out.println(stringWithSpaces.replaceAll("\\b", "<b>"));
+
+        //QUANTIFIER {x}; +;
+        String alphanumeric3 = "abcdEEEEEEEEEEEEEEEEEEEEfghiJJJJjjjJ1a2b3c4d";
+        System.out.println(alphanumeric3.replaceAll("^abcdE{3}", "X"));
+        System.out.println(alphanumeric3.replaceAll("^abcdE+", "X"));
+        System.out.println(alphanumeric3.replaceAll("^abcdE*", "X"));
+        System.out.println(alphanumeric3.replaceAll("^abcdE{2,5}", "X"));
+        System.out.println(alphanumeric3.replaceAll("(?i)e+fghij*", "X"));
+
+        //Patterns and Matchers
+        
     }
 }
