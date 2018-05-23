@@ -1,5 +1,8 @@
 package regex;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class RegexMain {
 
     public static void main(String[] args) {
@@ -47,6 +50,19 @@ public class RegexMain {
         System.out.println(alphanumeric3.replaceAll("(?i)e+fghij*", "X"));
 
         //Patterns and Matchers
-        
+        String htmlString = "<h1>Big heading<h2>";
+        StringBuilder htmlStringBuilder = new StringBuilder(htmlString);
+        htmlStringBuilder.append("<p>A new paragraph</p>");
+        htmlStringBuilder.append("<h2>Another heading</h2>");
+        htmlStringBuilder.append("<p>A new subparahraph</p>");
+
+        String h2pattern = ".*<h2>.*";//Everything before and everything after
+        Pattern pattern = Pattern.compile(h2pattern, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
+        Matcher matcher = pattern.matcher(htmlString);
+        System.out.println(matcher.matches());
+
+
+
+
     }
 }
