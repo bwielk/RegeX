@@ -21,5 +21,20 @@ public class RegexMain {
 
         System.out.println(alphanumeric1.replaceAll("kl6543$", "THIS_IS_THE_END"));
         System.out.println(alphanumeric1.replaceAll("[GHIII]", "(CHAR)"));
+
+        System.out.println("blazej".replaceAll("[Bb]", "XX"));
+        System.out.println("blazej".replaceAll("[^Bb]", "XYZ"));
+        System.out.println(alphanumeric1.replaceAll("[abcdefGgHhIiJ12345]", "X"));
+        System.out.println(alphanumeric1.replaceAll("[a-f1-5]", "X"));
+        System.out.println(alphanumeric1.replaceAll("[a-fA-Z1-5]", "X"));
+        System.out.println(alphanumeric1.replaceAll("(?i)[a-j1-5]", "X"));//(?i) cancels case sensitivity
+        System.out.println(alphanumeric1.replaceAll("\\d", "X"));// \\d replaces any digits
+        System.out.println(alphanumeric1.replaceAll("\\D", "X"));// \\d replaces any non-digits
+
+        String stringWithSpaces = "Lorem impsum \nLorem ipsum two \tLorem ipsum three";
+        System.out.println(stringWithSpaces.replaceAll("\\s", "(SPACE)"));// \\s removes any sort of spaces
+        System.out.println(stringWithSpaces.replaceAll("\\S", "."));
+        System.out.println(stringWithSpaces.replaceAll("\\W", "."));
+        System.out.println(stringWithSpaces.replaceAll("\\w", "."));
     }
 }
