@@ -50,19 +50,39 @@ public class RegexMain {
         System.out.println(alphanumeric3.replaceAll("(?i)e+fghij*", "X"));
 
         //Patterns and Matchers
-        String htmlString = "<h1>Big heading<h2>";
-        StringBuilder htmlStringBuilder = new StringBuilder(htmlString);
-        htmlStringBuilder.append("<p>A new paragraph</p>");
-        htmlStringBuilder.append("<h2>Another heading</h2>");
-        htmlStringBuilder.append("<p>A new subparahraph</p>");
+        StringBuilder htmlString = new StringBuilder("<h2>A heading</h2>");
+        htmlString.append("<p>A new paragraph</p>");
+        htmlString.append("<h2>Another heading</h2>");
+        htmlString.append("<p>A new subparahraph</p>");
 
-        String h2pattern = ".*<h2>.*";//Everything before and everything after
+        String h2pattern = "(<h2>)";//Everything before and everything after
         Pattern pattern = Pattern.compile(h2pattern, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
-        Matcher matcher = pattern.matcher(htmlString);
-        System.out.println(matcher.matches());
+        Matcher matcher1 = pattern.matcher(htmlString);
+        System.out.println(matcher1.matches());
 
+        int count = 0;
+        matcher1.reset();
+        while(matcher1.find()){
+            count++;
+            System.out.println("Occurence: " + count + " => " + matcher1.start() + " to " + matcher1.end());
+        }
 
+        String h2Group = "(<h2>.*?</h2>)";
+        Pattern h2GroupPattern = Pattern.compile(h2Group);
+        Matcher groupMatcher = h2GroupPattern.matcher(htmlString);
+        groupMatcher.reset();
 
+        while(groupMatcher.find()){
+            System.out.println("Occurence: " + groupMatcher.group(1));
+        }
 
+        //Reading what's the content between the tags is
+        String h2TextGroup = "(<h2>)(.*?)(</h2>)";
+        Pattern h2TextGroupPattern = Pattern.compile(h2TextGroup);
+        Matcher h2TextGroupMatcher = h2TextGroupPattern.matcher(htmlString);
+
+        while(h2TextGroupMatcher.find()){
+            System.out.println("Occurence: " + h2TextGroupMatcher.group(2));
+        }
     }
 }
