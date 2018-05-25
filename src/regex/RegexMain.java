@@ -92,9 +92,12 @@ public class RegexMain {
         //NOT
         String tvWord = "tstvtvst";
         //String tNotVRegEx = "t[V|v]";
-        String tNotVRegEx = "t(?!V|v)";
+        String tNotVRegEx = "t(?!V|v)";//NO MATCH
+        String tVRegEx = "t(?=V|v)";//MATCHES
         Pattern tNotVPattern = Pattern.compile(tNotVRegEx);
+        Pattern tVPattern = Pattern.compile(tVRegEx);
         Matcher tNotVMatcher = tNotVPattern.matcher(tvWord);
+        Matcher tVMatcher = tVPattern.matcher(tvWord);
 
         count = 0;
         while(tNotVMatcher.find()){
@@ -102,5 +105,11 @@ public class RegexMain {
             System.out.println("Occurence: " + count + " --> " + tNotVMatcher.start() + " to " + tNotVMatcher.end());
         }
 
+        count = 0;
+
+        while(tVMatcher.find()){
+            count++;
+            System.out.println("Occurence: " + count + " --> " + tVMatcher.start() + " to " + tVMatcher.end());
+        }
     }
 }
