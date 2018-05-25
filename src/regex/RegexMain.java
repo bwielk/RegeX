@@ -84,5 +84,23 @@ public class RegexMain {
         while(h2TextGroupMatcher.find()){
             System.out.println("Occurence: " + h2TextGroupMatcher.group(2));
         }
+
+        //Logical operators in regex
+        //OR
+        System.out.println("Larry".replaceAll("[L|l]arry", "Harry"));
+        System.out.println("larry".replaceAll("[L|l]arry", "Barry"));
+        //NOT
+        String tvWord = "tstvtvst";
+        //String tNotVRegEx = "t[V|v]";
+        String tNotVRegEx = "t(?!V|v)";
+        Pattern tNotVPattern = Pattern.compile(tNotVRegEx);
+        Matcher tNotVMatcher = tNotVPattern.matcher(tvWord);
+
+        count = 0;
+        while(tNotVMatcher.find()){
+            count++;
+            System.out.println("Occurence: " + count + " --> " + tNotVMatcher.start() + " to " + tNotVMatcher.end());
+        }
+
     }
 }
