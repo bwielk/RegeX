@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32416973-5c6e-4a59-94dd-650702fe433a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/regexChallenges/RegexChallenges.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +18,8 @@
       <file leaf-file-name="RegexMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/regex/RegexMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+            <state relative-caret-position="231">
+              <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegexChallenges1.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java">
+      <file leaf-file-name="RegexChallenges.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+            <state relative-caret-position="248">
+              <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,7 +56,9 @@
       <list>
         <option value="$PROJECT_DIR$/src/regex/Regex.java" />
         <option value="$PROJECT_DIR$/src/regex/RegexMain.java" />
+        <option value="$PROJECT_DIR$/src/regexChallenges/RegexChallenges2.java" />
         <option value="$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java" />
+        <option value="$PROJECT_DIR$/src/regexChallenges/RegexChallenges.java" />
       </list>
     </option>
   </component>
@@ -112,7 +115,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RegexChallenges1">
+  <component name="RunManager" selected="Application.RegexChallenges">
+    <configuration name="RegexChallenges" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="regexChallenges.RegexChallenges" />
+      <module name="regex" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="regexChallenges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="RegexChallenges1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="regexChallenges.RegexChallenges1" />
       <module name="regex" />
@@ -179,9 +193,11 @@
     <list>
       <item itemvalue="Application.RegexMain" />
       <item itemvalue="Application.RegexChallenges1" />
+      <item itemvalue="Application.RegexChallenges" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegexChallenges" />
         <item itemvalue="Application.RegexChallenges1" />
         <item itemvalue="Application.RegexMain" />
       </list>
@@ -239,7 +255,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java</url>
+          <url>file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges.java</url>
           <line>19</line>
           <properties />
         </line-breakpoint>
@@ -258,20 +274,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="53" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/regex/RegexMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="231">
+          <caret line="83" column="33" selection-start-line="83" selection-start-column="33" selection-end-line="83" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java">
+    <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="33" column="57" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="57" />
+        <state relative-caret-position="248">
+          <caret line="45" column="82" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

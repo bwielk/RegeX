@@ -3,7 +3,7 @@ package regexChallenges;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegexChallenges1 {
+public class RegexChallenges {
 
     public static void main(String[] args) {
         String challenge1 = "I want a bike";
@@ -35,11 +35,19 @@ public class RegexChallenges1 {
         doesItWork("\\D+.\\d+", "kI.2", 7);
         doesItWork("[a-z]+.\\d+", "abc.123", 7);
         doesItWork("(?i)[a-z]+.\\d+", "AbcddaAA.12334422", 7);
-        
 
+        String challenge8 = "abcd.123uvqz.7tzik.999";
+        Pattern chall8pattern = Pattern.compile("(?i)[a-z]+\\.(\\d+)");
+        Matcher chall8matcher = chall8pattern.matcher(challenge8);
+
+        System.out.println(challenge8.matches("(?i)[a-z]+.(\\d+)(?i)[a-z]+.\\d(?i)[a-z]+.\\d+"));
+
+        while(chall8matcher.find()){
+            System.out.println("Challenge 8 : Occurence: " + chall8matcher.group(1));
+        }
     }
 
-    private static void doesItWork(String regex, String challenge, int challengeNum){
+    public static void doesItWork(String regex, String challenge, int challengeNum){
         System.out.println("Challenge " + challengeNum + ": " + challenge.matches(regex));
     }
 }
