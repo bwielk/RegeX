@@ -28,7 +28,15 @@ public class RegexChallenges1 {
         System.out.println("Challenge 4 : " + challenge4.replaceAll("\\s", "_"));
 
         String challenge5 = "aaabcccccccdddefffg";
-        System.out.println("Challenge 5 : " + challenge5.matches("a{3}bc{7}d{3}ef{3}g"));
+        doesItWork("[abcdefg]+", challenge5,5);
+        doesItWork("[a-g]+", challenge5,5);
+        doesItWork("a{3}bc{7}d{3}ef{3}g$", challenge5,6);
+
+        doesItWork("\\D+.\\d+", "kI.2", 7);
+        doesItWork("[a-z]+.\\d+", "abc.123", 7);
+        doesItWork("(?i)[a-z]+.\\d+", "AbcddaAA.12334422", 7);
+        
+
     }
 
     private static void doesItWork(String regex, String challenge, int challengeNum){
