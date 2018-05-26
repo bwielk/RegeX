@@ -64,7 +64,7 @@ public class RegexChallenges {
         while(chall10matcher.find()){
             System.out.println("Challenge 10 : " + chall10matcher.group(1));
         }
-        String ukPostcodeRegex = "^(?i)[a-z]{1,2}\\d{1,2}\\s*\\d(?i)[a-z]{2}$";
+        String ukPostcodeRegex = "^(?i)[a-z]{1,2}\\d{1,2}\\s*\\d(?i)[a-z]{2}$"; //UK POSTCODE REGEX (simplified)
         System.out.println("Challenge 11 : " + "VH21   2EF".matches(ukPostcodeRegex));
         System.out.println("Challenge 11 : " + "EH6 8SF".matches(ukPostcodeRegex));
         System.out.println("Challenge 11 : " + "GA168SX".matches(ukPostcodeRegex));
@@ -72,6 +72,21 @@ public class RegexChallenges {
         System.out.println("Challenge 11 : " + "GA162SF".matches(ukPostcodeRegex));
         System.out.println("Challenge 11 : " + "EH76  1SE".matches(ukPostcodeRegex));
         System.out.println("Challenge 11 : " + "B33 8TH".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "CA12 4TN".matches(ukPostcodeRegex));
+
+        String plPostcodeRegex = "^\\d{2}-\\d{3}$";
+        System.out.println("Challenge 12 : " + "22-400".matches(plPostcodeRegex));
+        System.out.println("Challenge 12 : " + "21-200".matches(plPostcodeRegex));
+        System.out.println("Challenge 12 : " + "20-827".matches(plPostcodeRegex));
+
+        String ukPhoneNumberRegex = "^\\+44?\\s*\\d{3}\\s*\\d{3}\\s*(\\d{4}|\\d{2}\\s*\\d{2})$";
+        System.out.println("Challenge 13 : " + "+44 794 710 5728".matches(ukPhoneNumberRegex));
+        System.out.println("Challenge 13 : " + "+447147235318".matches(ukPhoneNumberRegex));
+        System.out.println("Challenge 13 : " + "+44 714 723 53 18".matches(ukPhoneNumberRegex));
+        System.out.println("Challenge 13 : " + "+44 714123 53 18".matches(ukPhoneNumberRegex));
+        System.out.println("Challenge 13 : " + "0 714 100 23 38".matches(ukPhoneNumberRegex));
+        System.out.println("Challenge 13 : " + "714 100 23 38".matches(ukPhoneNumberRegex));
+        System.out.println("Challenge 13 : " + "7141002338".matches(ukPhoneNumberRegex));
     }
 
     public static void doesItWork(String regex, String challenge, int challengeNum){
