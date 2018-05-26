@@ -64,6 +64,14 @@ public class RegexChallenges {
         while(chall10matcher.find()){
             System.out.println("Challenge 10 : " + chall10matcher.group(1));
         }
+        String ukPostcodeRegex = "^(?i)[a-z]{1,2}\\d{1,2}\\s*\\d(?i)[a-z]{2}$";
+        System.out.println("Challenge 11 : " + "VH21   2EF".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "EH6 8SF".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "GA168SX".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "G16 8SX".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "GA162SF".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "EH76  1SE".matches(ukPostcodeRegex));
+        System.out.println("Challenge 11 : " + "B33 8TH".matches(ukPostcodeRegex));
     }
 
     public static void doesItWork(String regex, String challenge, int challengeNum){
