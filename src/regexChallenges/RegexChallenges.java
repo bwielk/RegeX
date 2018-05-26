@@ -79,7 +79,7 @@ public class RegexChallenges {
         System.out.println("Challenge 12 : " + "21-200".matches(plPostcodeRegex));
         System.out.println("Challenge 12 : " + "20-827".matches(plPostcodeRegex));
 
-        String ukPhoneNumberRegex = "^\\+44?\\s*\\d{3}\\s*\\d{3}\\s*(\\d{4}|\\d{2}\\s*\\d{2})$";
+        String ukPhoneNumberRegex = "^(\\+44|0)?\\s*\\d{3}\\s*\\d{3}\\s*(\\d{4}|\\d{2}\\s*\\d{2})$";//UK PHONE NUMBER REGEX (simplified)
         System.out.println("Challenge 13 : " + "+44 794 710 5728".matches(ukPhoneNumberRegex));
         System.out.println("Challenge 13 : " + "+447147235318".matches(ukPhoneNumberRegex));
         System.out.println("Challenge 13 : " + "+44 714 723 53 18".matches(ukPhoneNumberRegex));
@@ -87,6 +87,16 @@ public class RegexChallenges {
         System.out.println("Challenge 13 : " + "0 714 100 23 38".matches(ukPhoneNumberRegex));
         System.out.println("Challenge 13 : " + "714 100 23 38".matches(ukPhoneNumberRegex));
         System.out.println("Challenge 13 : " + "7141002338".matches(ukPhoneNumberRegex));
+
+        String plPhoneNumberRegex = "^(0|\\+48)?\\s*\\d{3}\\s*(\\d{3}\\s*\\d{3}|\\d{2}\\s*\\d{2}\\s*\\d{2}\\s*)$"; //POLISH PHONE NUMBER REGEX (simplified)
+        System.out.println("Challenge 14 : " + "0976234112".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "+48 976234112".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "+48 976 234 112".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "+48976 234112".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "+48976 234112".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "888 133 112".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "800 11 21 12".matches(plPhoneNumberRegex));
+        System.out.println("Challenge 14 : " + "0 700 880 774".matches(plPhoneNumberRegex));
     }
 
     public static void doesItWork(String regex, String challenge, int challengeNum){
