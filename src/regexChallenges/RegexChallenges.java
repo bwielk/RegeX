@@ -64,42 +64,42 @@ public class RegexChallenges {
         while(chall10matcher.find()){
             System.out.println("Challenge 10 : " + chall10matcher.group(1));
         }
-        String ukPostcodeRegex = "^(?i)[a-z]{1,2}\\d{1,2}\\s*\\d(?i)[a-z]{2}$"; //UK POSTCODE REGEX (simplified)
-        System.out.println("Challenge 11 : " + "VH21   2EF".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "EH6 8SF".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "GA168SX".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "G16 8SX".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "GA162SF".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "EH76  1SE".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "B33 8TH".matches(ukPostcodeRegex));
-        System.out.println("Challenge 11 : " + "CA12 4TN".matches(ukPostcodeRegex));
+        String ukPostcodeRegex = "^\\s*(?i)[a-z]{1,2}\\d{1,2}\\s*\\d(?i)[a-z]{2}\\s*$"; //UK POSTCODE REGEX (simplified)
+        doesItWork(ukPostcodeRegex, "VH21   2EF", 11);
+        doesItWork(ukPostcodeRegex, "EH6 8SF", 11);
+        doesItWork(ukPostcodeRegex, " GA168SX ", 11);
+        doesItWork(ukPostcodeRegex, "G16 8SX", 11);
+        doesItWork(ukPostcodeRegex, "GA162SF", 11);
+        doesItWork(ukPostcodeRegex, "EH76  1SE", 11);
+        doesItWork(ukPostcodeRegex, "B33 8TH      ", 11);
+        doesItWork(ukPostcodeRegex, "CA12 4TN", 11);
 
-        String plPostcodeRegex = "^\\d{2}-\\d{3}$";
-        System.out.println("Challenge 12 : " + "22-400".matches(plPostcodeRegex));
-        System.out.println("Challenge 12 : " + "21-200".matches(plPostcodeRegex));
-        System.out.println("Challenge 12 : " + "20-827".matches(plPostcodeRegex));
+        String plPostcodeRegex = "^\\d{2}\\s*-\\s*\\d{3}\\s*$";
+        doesItWork(plPostcodeRegex, "22-400", 12);
+        doesItWork(plPostcodeRegex, "21-200", 12);
+        doesItWork(plPostcodeRegex, "20 - 827  ", 12);
 
-        String ukPhoneNumberRegex = "^(\\+44|0)?\\s*\\d{3}\\s*\\d{3}\\s*(\\d{4}|\\d{2}\\s*\\d{2})$";//UK PHONE NUMBER REGEX (simplified)
-        System.out.println("Challenge 13 : " + "+44 794 710 5728".matches(ukPhoneNumberRegex));
-        System.out.println("Challenge 13 : " + "+447147235318".matches(ukPhoneNumberRegex));
-        System.out.println("Challenge 13 : " + "+44 714 723 53 18".matches(ukPhoneNumberRegex));
-        System.out.println("Challenge 13 : " + "+44 714123 53 18".matches(ukPhoneNumberRegex));
-        System.out.println("Challenge 13 : " + "0 714 100 23 38".matches(ukPhoneNumberRegex));
-        System.out.println("Challenge 13 : " + "714 100 23 38".matches(ukPhoneNumberRegex));
-        System.out.println("Challenge 13 : " + "7141002338".matches(ukPhoneNumberRegex));
+        String ukPhoneNumberRegex = "^\\s*(\\+44|0)?\\s*\\d{3}\\s*\\d{3}\\s*(\\d{4}|\\d{2}\\s*\\d{2})\\s*$";//UK PHONE NUMBER REGEX (simplified)
+        doesItWork(ukPhoneNumberRegex, "+44 794 710 5728", 13);
+        doesItWork(ukPhoneNumberRegex, " +447147235318", 13);
+        doesItWork(ukPhoneNumberRegex, "+44 714 723 53 18", 13);
+        doesItWork(ukPhoneNumberRegex, " +44 714123 53 18", 13);
+        doesItWork(ukPhoneNumberRegex, "0 714 100 23 38", 13);
+        doesItWork(ukPhoneNumberRegex, "714 100 23 38 ", 13);
+        doesItWork(ukPhoneNumberRegex, "7141002338", 13);
 
         String plPhoneNumberRegex = "^(0|\\+48)?\\s*\\d{3}\\s*(\\d{3}\\s*\\d{3}|\\d{2}\\s*\\d{2}\\s*\\d{2}\\s*)$"; //POLISH PHONE NUMBER REGEX (simplified)
-        System.out.println("Challenge 14 : " + "0976234112".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "+48 976234112".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "+48 976 234 112".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "+48976 234112".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "+48976 234112".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "888 133 112".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "800 11 21 12".matches(plPhoneNumberRegex));
-        System.out.println("Challenge 14 : " + "0 700 880 774".matches(plPhoneNumberRegex));
+        doesItWork(plPhoneNumberRegex, "0976234112", 14);
+        doesItWork(plPhoneNumberRegex, "+48 976234112", 14);
+        doesItWork(plPhoneNumberRegex, "+48 976 234 112", 14);
+        doesItWork(plPhoneNumberRegex, "+48976 234112", 14);
+        doesItWork(plPhoneNumberRegex, "+48976 234112", 14);
+        doesItWork(plPhoneNumberRegex, "888 133 112", 14);
+        doesItWork(plPhoneNumberRegex, "800 11 21 12", 14);
+        doesItWork(plPhoneNumberRegex, "0 700 880 774", 14);
     }
 
-    public static void doesItWork(String regex, String challenge, int challengeNum){
-        System.out.println("Challenge " + challengeNum + ": " + challenge.matches(regex));
+    public static void doesItWork(String regex, String stringToValidate, int challengeNum){
+        System.out.println("Challenge " + challengeNum + ": " + stringToValidate.matches(regex));
     }
 }
