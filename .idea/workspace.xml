@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32416973-5c6e-4a59-94dd-650702fe433a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/regex/RegexMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/regex/RegexMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,14 +15,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RegexMain.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegexMain.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/regex/RegexMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="231">
-              <caret line="111" column="109" selection-start-line="111" selection-start-column="109" selection-end-line="111" selection-end-column="109" />
+              <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegexChallenges1.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -43,6 +53,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/regex/Regex.java" />
         <option value="$PROJECT_DIR$/src/regex/RegexMain.java" />
+        <option value="$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java" />
       </list>
     </option>
   </component>
@@ -73,7 +84,7 @@
               <item name="regex" type="b2602c69:ProjectViewProjectNode" />
               <item name="regex" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="regex" type="462c0819:PsiDirectoryNode" />
+              <item name="regexChallenges" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -99,7 +110,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RegexChallenges1">
+    <configuration name="RegexChallenges1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="regexChallenges.RegexChallenges1" />
+      <module name="regex" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="regexChallenges.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="RegexMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="regex.RegexMain" />
       <module name="regex" />
@@ -152,8 +174,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.RegexMain" />
+      <item itemvalue="Application.RegexChallenges1" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RegexChallenges1" />
         <item itemvalue="Application.RegexMain" />
       </list>
     </recent_temporary>
@@ -220,10 +247,17 @@
     <entry file="file://$PROJECT_DIR$/src/regex/RegexMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
-          <caret line="111" column="109" selection-start-line="111" selection-start-column="109" selection-end-line="111" selection-end-column="109" />
+          <caret line="109" column="12" selection-start-line="109" selection-start-column="12" selection-end-line="109" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/regexChallenges/RegexChallenges1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
         </state>
       </provider>
     </entry>
