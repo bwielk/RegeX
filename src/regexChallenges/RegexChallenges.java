@@ -1,5 +1,7 @@
 package regexChallenges;
 
+import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -44,6 +46,23 @@ public class RegexChallenges {
 
         while(chall8matcher.find()){
             System.out.println("Challenge 8 : Occurence: " + chall8matcher.group(1));
+        }
+
+        String challenge9 = "abcd.335\tuvqz.417\ttzik.911\n";
+        Pattern chall9pattern = Pattern.compile("(?i)[a-z]+\\.(\\d+)\\D");
+        Matcher chall9matcher = chall9pattern.matcher(challenge9);
+
+        while(chall9matcher.find()){
+            System.out.println("Challenge 9 : Occuerence: " + chall9matcher.group(1));
+        }
+
+        String challenge10 = "{0, 1}, {0, yy}, {1, 3}, {2, 5}, {2a, 56}, {23, 1}";
+        System.out.println("Challenge 10 : " + challenge10.replaceAll("[{}]", ""));
+        Pattern chall10pattern = Pattern.compile("\\{(\\d+, \\d+)\\}");
+        Matcher chall10matcher = chall10pattern.matcher(challenge10);
+
+        while(chall10matcher.find()){
+            System.out.println("Challenge 10 : " + chall10matcher.group(1));
         }
     }
 
